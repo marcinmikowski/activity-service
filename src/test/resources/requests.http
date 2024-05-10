@@ -1,0 +1,6 @@
+## Redis
+GET http://localhost:8080/activity
+Accept: application/json
+
+### EhCache
+GET http://localhost:8080/activity/eh/1

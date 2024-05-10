@@ -1,0 +1,37 @@
+<eh:config
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns:eh='http://www.ehcache.org/v3'
+        xmlns:jsr107='http://www.ehcache.org/v3/jsr107'
+        xsi:schemaLocation="
+        http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
+        http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
+
+    <eh:cache alias="ehcacheExample">
+        <eh:key-type>java.lang.String</eh:key-type>
+        <eh:value-type>pl.mikus.learning.model.Activity</eh:value-type>
+
+        <eh:expiry>
+            <eh:ttl unit="seconds">10</eh:ttl>
+        </eh:expiry>
+
+        <eh:resources>
+            <eh:disk unit="MB">120</eh:disk>
+            <eh:offheap unit="MB">100</eh:offheap>
+        </eh:resources>
+    </eh:cache>
+
+    <eh:cache alias="activity">
+        <eh:key-type>java.lang.String</eh:key-type>
+        <eh:value-type>pl.mikus.learning.model.Activity</eh:value-type>
+
+        <eh:expiry>
+            <eh:ttl unit="seconds">10</eh:ttl>
+        </eh:expiry>
+
+        <eh:resources>
+            <eh:disk unit="MB">120</eh:disk>
+            <eh:offheap unit="MB">100</eh:offheap>
+        </eh:resources>
+    </eh:cache>
+    <
+</eh:config>

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: activity-service
+  cache:
+    redis:
+      time-to-live: 5s
+    jcache:
+      config: classpath:/ehcache.xml
+    type: redis
+
+resilience4j:
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 2s
+        cancel-running-future: true
+    instances:
+      activity:
+        baseConfig: default
